@@ -8,6 +8,8 @@ Repo for experimenting on global variable lookup performance inside of Nodejs VM
 
 # Results?
 
+using node v10.1.0
+
 |      exp label                |      time        |
 |---------------------|------------|
 | vm-context-compare.js	|	76 |
