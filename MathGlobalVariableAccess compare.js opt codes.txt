@@ -1,0 +1,269 @@
+JEST
+
+
+--- Raw source ---
+() {
+    Math.max(1, 0);
+    Math.max(1.555555, 0);
+    Math.min(1, 1.4444);
+    Math.min(0, 1);
+}
+
+
+--- Optimized code ---
+optimization_id = 19
+source_position = 1281
+kind = OPTIMIZED_FUNCTION
+name = MathGlobalVariableAccess
+stack_slots = 4
+compiler = turbofan
+address = 0xaef96041d01
+Body (size = 423)
+Instructions (size = 340)
+                  -- Prologue: check for deoptimization --
+0xaef96041d60     0  488b59c8       REX.W movq rbx,[rcx-0x38]
+0xaef96041d64     4  f6430f01       testb [rbx+0xf],0x1
+0xaef96041d68     8  0f851234f5ff   jnz 0xaef95f95180  (CompileLazyDeoptimizedCode)    ;; code: BUILTIN
+                  -- B0 start (construct frame) --
+0xaef96041d6e     e  55             push rbp
+0xaef96041d6f     f  4889e5         REX.W movq rbp,rsp
+0xaef96041d72    12  56             push rsi
+0xaef96041d73    13  57             push rdi
+0xaef96041d74    14  493ba5300f0000 REX.W cmpq rsp,[r13+0xf30]
+0xaef96041d7b    1b  0f86d5000000   jna 0xaef96041e56  <+0xf6>
+                  -- B2 start --
+                  -- B3 start (deconstruct frame) --
+                  -- <not inlined:1290> --
+0xaef96041d81    21  488b75f8       REX.W movq rsi,[rbp-0x8]
+0xaef96041d85    25  33c0           xorl rax,rax
+0xaef96041d87    27  48b9e1b39a275a020000 REX.W movq rcx,0x25a279ab3e1    ;; object: 0x25a279ab3e1 <String[4]: Math>
+0xaef96041d91    31  488bd1         REX.W movq rdx,rcx
+0xaef96041d94    34  488bd8         REX.W movq rbx,rax
+0xaef96041d97    37  e86418f8ff     call 0xaef95fc3600  (LoadGlobalICTrampoline)    ;; code: BUILTIN
+0xaef96041d9c    3c  a801           test al,0x1
+0xaef96041d9e    3e  0f84d2000000   jz 0xaef96041e76  <+0x116>
+0xaef96041da4    44  48bbe15a302a5a020000 REX.W movq rbx,0x25a2a305ae1    ;; object: 0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>
+0xaef96041dae    4e  483958ff       REX.W cmpq [rax-0x1],rbx
+0xaef96041db2    52  0f85c3000000   jnz 0xaef96041e7b  <+0x11b>
+                  -- <not inlined:1310> --
+0xaef96041db8    58  48b9e1b39a275a020000 REX.W movq rcx,0x25a279ab3e1    ;; object: 0x25a279ab3e1 <String[4]: Math>
+0xaef96041dc2    62  33c0           xorl rax,rax
+0xaef96041dc4    64  488b75f8       REX.W movq rsi,[rbp-0x8]
+0xaef96041dc8    68  e83318f8ff     call 0xaef95fc3600  (LoadGlobalICTrampoline)    ;; code: BUILTIN
+0xaef96041dcd    6d  a801           test al,0x1
+0xaef96041dcf    6f  0f84b0000000   jz 0xaef96041e85  <+0x125>
+0xaef96041dd5    75  48bbe15a302a5a020000 REX.W movq rbx,0x25a2a305ae1    ;; object: 0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>
+0xaef96041ddf    7f  483958ff       REX.W cmpq [rax-0x1],rbx
+0xaef96041de3    83  0f85a1000000   jnz 0xaef96041e8a  <+0x12a>
+                  -- <not inlined:1337> --
+0xaef96041de9    89  48b9e1b39a275a020000 REX.W movq rcx,0x25a279ab3e1    ;; object: 0x25a279ab3e1 <String[4]: Math>
+0xaef96041df3    93  33c0           xorl rax,rax
+0xaef96041df5    95  488b75f8       REX.W movq rsi,[rbp-0x8]
+0xaef96041df9    99  e80218f8ff     call 0xaef95fc3600  (LoadGlobalICTrampoline)    ;; code: BUILTIN
+0xaef96041dfe    9e  a801           test al,0x1
+0xaef96041e00    a0  0f848e000000   jz 0xaef96041e94  <+0x134>
+0xaef96041e06    a6  48bbe15a302a5a020000 REX.W movq rbx,0x25a2a305ae1    ;; object: 0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>
+0xaef96041e10    b0  483958ff       REX.W cmpq [rax-0x1],rbx
+0xaef96041e14    b4  0f857f000000   jnz 0xaef96041e99  <+0x139>
+                  -- <not inlined:1362> --
+0xaef96041e1a    ba  48b9e1b39a275a020000 REX.W movq rcx,0x25a279ab3e1    ;; object: 0x25a279ab3e1 <String[4]: Math>
+0xaef96041e24    c4  33c0           xorl rax,rax
+0xaef96041e26    c6  488b75f8       REX.W movq rsi,[rbp-0x8]
+0xaef96041e2a    ca  e8d117f8ff     call 0xaef95fc3600  (LoadGlobalICTrampoline)    ;; code: BUILTIN
+0xaef96041e2f    cf  a801           test al,0x1
+0xaef96041e31    d1  0f846c000000   jz 0xaef96041ea3  <+0x143>
+0xaef96041e37    d7  48bbe15a302a5a020000 REX.W movq rbx,0x25a2a305ae1    ;; object: 0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>
+0xaef96041e41    e1  483958ff       REX.W cmpq [rax-0x1],rbx
+0xaef96041e45    e5  0f855d000000   jnz 0xaef96041ea8  <+0x148>
+0xaef96041e4b    eb  498b45a0       REX.W movq rax,[r13-0x60]
+0xaef96041e4f    ef  488be5         REX.W movq rsp,rbp
+0xaef96041e52    f2  5d             pop rbp
+0xaef96041e53    f3  c20800         ret 0x8
+                  -- B4 start (no frame) --
+                  -- B1 start (deferred) --
+                  -- <not inlined:1281> --
+0xaef96041e56    f6  48bb00c47a0001000000 REX.W movq rbx,0x1007ac400
+0xaef96041e60   100  33c0           xorl rax,rax
+0xaef96041e62   102  488b75f8       REX.W movq rsi,[rbp-0x8]
+0xaef96041e66   106  e8b523f4ff     call 0xaef95f84220       ;; code: STUB, CEntryStub, minor: 8
+0xaef96041e6b   10b  e911ffffff     jmp 0xaef96041d81  <+0x21>
+0xaef96041e70   110  90             nop
+0xaef96041e71   111  e8ea210c00     call 0xaef96104060       ;; lazy deoptimization bailout 0
+0xaef96041e76   116  e8ea210400     call 0xaef96084065       ;; deoptimization bailout 1
+0xaef96041e7b   11b  e8ea210400     call 0xaef9608406a       ;; deoptimization bailout 2
+0xaef96041e80   120  e8ea210c00     call 0xaef9610406f       ;; lazy deoptimization bailout 3
+0xaef96041e85   125  e8ea210400     call 0xaef96084074       ;; deoptimization bailout 4
+0xaef96041e8a   12a  e8ea210400     call 0xaef96084079       ;; deoptimization bailout 5
+0xaef96041e8f   12f  e8ea210c00     call 0xaef9610407e       ;; lazy deoptimization bailout 6
+0xaef96041e94   134  e8ea210400     call 0xaef96084083       ;; deoptimization bailout 7
+0xaef96041e99   139  e8ea210400     call 0xaef96084088       ;; deoptimization bailout 8
+0xaef96041e9e   13e  e8ea210c00     call 0xaef9610408d       ;; lazy deoptimization bailout 9
+0xaef96041ea3   143  e8ea210400     call 0xaef96084092       ;; deoptimization bailout 10
+0xaef96041ea8   148  e8ea210400     call 0xaef96084097       ;; deoptimization bailout 11
+0xaef96041ead   14d  e8ea210c00     call 0xaef9610409c       ;; lazy deoptimization bailout 12
+0xaef96041eb2   152  6690           nop
+                  ;;; Safepoint table.
+
+Source positions:
+ pc offset  position
+        21      1290
+        58      1310
+        89      1337
+        ba      1362
+        f6      1281
+
+Inlined functions (count = 0)
+
+Deoptimization Input Data (deopt points = 13)
+ index  bytecode-offset    pc
+     0                1    3c
+     1                6    NA
+     2                6    NA
+     3               25    6d
+     4               30    NA
+     5               30    NA
+     6               49    9e
+     7               54    NA
+     8               54    NA
+     9               74    cf
+    10               79    NA
+    11               79    NA
+    12                0   10b
+
+Safepoints (size = 83)
+0xaef96041d9c      3c   111  0000 (sp -> fp)       0
+0xaef96041dcd      6d   120  0000 (sp -> fp)       3
+0xaef96041dfe      9e   12f  0000 (sp -> fp)       6
+0xaef96041e2f      cf   13e  0000 (sp -> fp)       9
+0xaef96041e6b     10b   14d  0000 (sp -> fp)      12
+
+RelocInfo (size = 160)
+0xaef96041d60  comment  (-- Prologue: check for deoptimization --)
+0xaef96041d6a  code target (BUILTIN CompileLazyDeoptimizedCode)  (0xaef95f95180)
+0xaef96041d6e  comment  (-- B0 start (construct frame) --)
+0xaef96041d81  comment  (-- B2 start --)
+0xaef96041d81  comment  (-- B3 start (deconstruct frame) --)
+0xaef96041d81  comment  (-- <not inlined:1290> --)
+0xaef96041d89  embedded object  (0x25a279ab3e1 <String[4]: Math>)
+0xaef96041d98  code target (BUILTIN LoadGlobalICTrampoline)  (0xaef95fc3600)
+0xaef96041da6  embedded object  (0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>)
+0xaef96041db8  comment  (-- <not inlined:1310> --)
+0xaef96041dba  embedded object  (0x25a279ab3e1 <String[4]: Math>)
+0xaef96041dc9  code target (BUILTIN LoadGlobalICTrampoline)  (0xaef95fc3600)
+0xaef96041dd7  embedded object  (0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>)
+0xaef96041de9  comment  (-- <not inlined:1337> --)
+0xaef96041deb  embedded object  (0x25a279ab3e1 <String[4]: Math>)
+0xaef96041dfa  code target (BUILTIN LoadGlobalICTrampoline)  (0xaef95fc3600)
+0xaef96041e08  embedded object  (0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>)
+0xaef96041e1a  comment  (-- <not inlined:1362> --)
+0xaef96041e1c  embedded object  (0x25a279ab3e1 <String[4]: Math>)
+0xaef96041e2b  code target (BUILTIN LoadGlobalICTrampoline)  (0xaef95fc3600)
+0xaef96041e39  embedded object  (0x25a2a305ae1 <Map(HOLEY_ELEMENTS)>)
+0xaef96041e56  comment  (-- B4 start (no frame) --)
+0xaef96041e56  comment  (-- B1 start (deferred) --)
+0xaef96041e56  comment  (-- <not inlined:1281> --)
+0xaef96041e67  code target (STUB CEntryStub)  (0xaef95f84220)
+0xaef96041e72  runtime entry
+0xaef96041e77  runtime entry  (deoptimization bailout 1)
+0xaef96041e7c  runtime entry  (deoptimization bailout 2)
+0xaef96041e81  runtime entry
+0xaef96041e86  runtime entry  (deoptimization bailout 4)
+0xaef96041e8b  runtime entry  (deoptimization bailout 5)
+0xaef96041e90  runtime entry
+0xaef96041e95  runtime entry  (deoptimization bailout 7)
+0xaef96041e9a  runtime entry  (deoptimization bailout 8)
+0xaef96041e9f  runtime entry
+0xaef96041ea4  runtime entry  (deoptimization bailout 10)
+0xaef96041ea9  runtime entry  (deoptimization bailout 11)
+0xaef96041eae  runtime entry
+0xaef96041eb4  comment  (;;; Safepoint table.)
+
+--- End code ---
+
+--------------
+
+
+PLAIN
+
+
+--- Raw source ---
+() {
+    Math.max(1 , 0);
+    Math.max(1.555555, 0);
+    Math.min(1, 1.4444);
+    Math.min(0, 1);
+}
+
+
+--- Optimized code ---
+optimization_id = 3
+source_position = 1310
+kind = OPTIMIZED_FUNCTION
+name = MathGlobalVariableAccess
+stack_slots = 4
+compiler = turbofan
+address = 0x9d7a1a6fda1
+Body (size = 99)
+Instructions (size = 76)
+                  -- Prologue: check for deoptimization --
+0x9d7a1a6fe00     0  488b59c8       REX.W movq rbx,[rcx-0x38]
+0x9d7a1a6fe04     4  f6430f01       testb [rbx+0xf],0x1
+0x9d7a1a6fe08     8  0f857253f2ff   jnz 0x9d7a1995180  (CompileLazyDeoptimizedCode)    ;; code: BUILTIN
+                  -- B0 start (construct frame) --
+0x9d7a1a6fe0e     e  55             push rbp
+0x9d7a1a6fe0f     f  4889e5         REX.W movq rbp,rsp
+0x9d7a1a6fe12    12  56             push rsi
+0x9d7a1a6fe13    13  57             push rdi
+0x9d7a1a6fe14    14  493ba5300f0000 REX.W cmpq rsp,[r13+0xf30]
+0x9d7a1a6fe1b    1b  0f860b000000   jna 0x9d7a1a6fe2c  <+0x2c>
+                  -- B2 start --
+                  -- B3 start (deconstruct frame) --
+0x9d7a1a6fe21    21  498b45a0       REX.W movq rax,[r13-0x60]
+0x9d7a1a6fe25    25  488be5         REX.W movq rsp,rbp
+0x9d7a1a6fe28    28  5d             pop rbp
+0x9d7a1a6fe29    29  c20800         ret 0x8
+                  -- B4 start (no frame) --
+                  -- B1 start (deferred) --
+                  -- <not inlined:1310> --
+0x9d7a1a6fe2c    2c  488975f8       REX.W movq [rbp-0x8],rsi
+0x9d7a1a6fe30    30  48bb00c47a0001000000 REX.W movq rbx,0x1007ac400
+0x9d7a1a6fe3a    3a  33c0           xorl rax,rax
+0x9d7a1a6fe3c    3c  e8df43f1ff     call 0x9d7a1984220       ;; code: STUB, CEntryStub, minor: 8
+0x9d7a1a6fe41    41  ebde           jmp 0x9d7a1a6fe21  <+0x21>
+0x9d7a1a6fe43    43  90             nop
+0x9d7a1a6fe44    44  e817420900     call 0x9d7a1b04060       ;; lazy deoptimization bailout 0
+0x9d7a1a6fe49    49  0f1f00         nop
+                  ;;; Safepoint table.
+
+Source positions:
+ pc offset  position
+        2c      1310
+
+Inlined functions (count = 0)
+
+Deoptimization Input Data (deopt points = 1)
+ index  bytecode-offset    pc
+     0                0    41
+
+Safepoints (size = 23)
+0x9d7a1a6fe41      41    44  0000 (sp -> fp)       0
+
+RelocInfo (size = 84)
+0x9d7a1a6fe00  comment  (-- Prologue: check for deoptimization --)
+0x9d7a1a6fe0a  code target (BUILTIN CompileLazyDeoptimizedCode)  (0x9d7a1995180)
+0x9d7a1a6fe0e  comment  (-- B0 start (construct frame) --)
+0x9d7a1a6fe21  comment  (-- B2 start --)
+0x9d7a1a6fe21  comment  (-- B3 start (deconstruct frame) --)
+0x9d7a1a6fe2c  comment  (-- B4 start (no frame) --)
+0x9d7a1a6fe2c  comment  (-- B1 start (deferred) --)
+0x9d7a1a6fe2c  comment  (-- <not inlined:1310> --)
+0x9d7a1a6fe3d  code target (STUB CEntryStub)  (0x9d7a1984220)
+0x9d7a1a6fe45  runtime entry
+0x9d7a1a6fe4c  comment  (;;; Safepoint table.)
+
+--- End code ---
+
+---------------
+
+
+

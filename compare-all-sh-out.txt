@@ -1,0 +1,116 @@
+~/D/temp $ ./compare-all.sh
++ sh -c 'node vm-context-compare.js'
+START Compare Math variable access
+ALL: 76.7071972321719, ONE: 0.00007670719723217189
+END Compare Math variable access
++ sh -c 'node jsdom-compare.js'
+START Compare Math variable access
+ALL: 84.29740090668201, ONE: 0.00008429740090668202
+END Compare Math variable access
++ sh -c 'node compare.js'
+START Compare Math variable access
+ALL: 84.07654832676053, ONE: 0.00008407654832676053
+END Compare Math variable access
++ sh -c 'node compare-in-node-jest-env.js'
+START Compare Math variable access
+ALL: 73.80816892534494, ONE: 0.00007380816892534494
+END Compare Math variable access
++ sh -c 'node ./node_modules/jest/bin/jest.js'
+ FAIL  __tests__/compare.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at node_modules/jest-cli/build/test_scheduler.js:157:22
+
+  console.log compare.js:59
+    START Compare Math variable access
+
+  console.log compare.js:44
+    ALL: 934.0839320477098, ONE: 0.0009340839320477098
+
+  console.log compare.js:61
+    END Compare Math variable access
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.721s
+Ran all test suites.
++ sh -c 'node ./node_modules/jest/bin/jest.js --env jsdom'
+ FAIL  __tests__/compare.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at node_modules/jest-cli/build/test_scheduler.js:157:22
+
+  console.log compare.js:59
+    START Compare Math variable access
+
+  console.log compare.js:44
+    ALL: 1520.0069849882275, ONE: 0.0015200069849882274
+
+  console.log compare.js:61
+    END Compare Math variable access
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        2.295s
+Ran all test suites.
++ sh -c 'node ./node_modules/jest/bin/jest.js --env node'
+ FAIL  __tests__/compare.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at node_modules/jest-cli/build/test_scheduler.js:157:22
+
+  console.log compare.js:59
+    START Compare Math variable access
+
+  console.log compare.js:44
+    ALL: 881.6604682225734, ONE: 0.0008816604682225734
+
+  console.log compare.js:61
+    END Compare Math variable access
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.224s
+Ran all test suites.
++ sh -c 'node ./node_modules/jest/bin/jest.js --env ./jest-env-this-ctx.js'
+ FAIL  __tests__/compare.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at node_modules/jest-cli/build/test_scheduler.js:157:22
+
+START Compare Math variable access
+ALL: 73.17402427643538, ONE: 0.00007317402427643537
+END Compare Math variable access
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.392s
+Ran all test suites.
++ sh -c 'node ./node_modules/jest/bin/jest.js --env ./jest-env-plain-ctx.js'
+ FAIL  __tests__/compare.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at node_modules/jest-cli/build/test_scheduler.js:157:22
+
+START Compare Math variable access
+ALL: 894.3985618315637, ONE: 0.0008943985618315637
+END Compare Math variable access
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.462s
+Ran all test suites.
+~/D/temp $

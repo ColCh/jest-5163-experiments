@@ -1,0 +1,840 @@
+Statistical profiling result from /Users/colch/Downloads/temp/node-prof/jest/isolate-0x102802400-v8.log, (2056 ticks, 208 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     12    0.6%          /usr/lib/system/libsystem_pthread.dylib
+      7    0.3%          /usr/lib/system/libsystem_malloc.dylib
+      3    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     79    3.8%    3.9%  LazyCompile: *now perf_hooks.js:415:6
+      7    0.3%    0.3%  LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+      2    0.1%    0.1%  LazyCompile: *normalizeString path.js:57:25
+      2    0.1%    0.1%  LazyCompile: *Module._resolveLookupPaths internal/modules/cjs/loader.js:378:38
+      2    0.1%    0.1%  LazyCompile: *Module._findPath internal/modules/cjs/loader.js:212:28
+      1    0.0%    0.0%  Script: ~<anonymous> _stream_duplex.js:1:11
+      1    0.0%    0.0%  LazyCompile: ~now perf_hooks.js:140:13
+      1    0.0%    0.0%  LazyCompile: *realpathSync fs.js:1622:40
+      1    0.0%    0.0%  LazyCompile: *extname path.js:1374:28
+      1    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:337:37
+      1    0.0%    0.0%  Builtin: StringPrototypeReplace
+      1    0.0%    0.0%  Builtin: MathRandom
+
+ [C++]:
+   ticks  total  nonlib   name
+    635   30.9%   31.2%  T node::contextify::ContextifyContext::PropertyGetterCallback(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+    358   17.4%   17.6%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     68    3.3%    3.3%  T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+     28    1.4%    1.4%  T ___pthread_sigmask
+     27    1.3%    1.3%  T v8::ArrayBuffer::GetContents()
+     25    1.2%    1.2%  t _internal_catch_exception_raise_state_identity
+     23    1.1%    1.1%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     21    1.0%    1.0%  t v8::internal::PropertyCallbackArguments::BasicCallNamedGetterCallback(void (*)(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&), v8::internal::Handle<v8::internal::Name>)
+     19    0.9%    0.9%  T _mlockall
+     18    0.9%    0.9%  t _uv__hrtime
+     17    0.8%    0.8%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     12    0.6%    0.6%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+     10    0.5%    0.5%  T _faccessat
+      9    0.4%    0.4%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.4%    0.4%  T v8::internal::Logger::ApiNamedPropertyAccess(char const*, v8::internal::JSObject*, v8::internal::Object*)
+      8    0.4%    0.4%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.4%    0.4%  T node::contextify::ContextifyScript::RunInThisContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.3%    0.3%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      7    0.3%    0.3%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.3%    0.3%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.3%    0.3%  t _szone_malloc_should_clear
+      7    0.3%    0.3%  T v8::ArrayBufferView::Buffer()
+      6    0.3%    0.3%  T v8::internal::JSTypedArray::GetBuffer()
+      6    0.3%    0.3%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.3%    0.3%  T _getsockname
+      5    0.2%    0.2%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObject**, v8::internal::HeapObject*)
+      5    0.2%    0.2%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      5    0.2%    0.2%  T v8::internal::interpreter::BytecodeArrayWriter::EmitBytecode(v8::internal::interpreter::BytecodeNode const*)
+      5    0.2%    0.2%  T v8::internal::StringTable::LookupKey(v8::internal::Isolate*, v8::internal::StringTableKey*)
+      5    0.2%    0.2%  T v8::internal::IncrementalMarking::Step(unsigned long, v8::internal::IncrementalMarking::CompletionAction, v8::internal::StepOrigin, v8::internal::WorklistToProcess)
+      4    0.2%    0.2%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.2%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.2%  t _mach_msg_destroy_port
+      4    0.2%    0.2%  t __os_unfair_lock_lock_slow
+      4    0.2%    0.2%  T v8::internal::TransitionArray::SearchDetails(int, v8::internal::PropertyKind, v8::internal::PropertyAttributes, int*)
+      4    0.2%    0.2%  T v8::internal::StringTable::LookupStringIfExists_NoAllocate(v8::internal::String*)
+      4    0.2%    0.2%  T v8::internal::Scanner::ScanIdentifierOrKeywordInner(v8::internal::Scanner::LiteralScope*)
+      4    0.2%    0.2%  T v8::internal::Heap::AllocateFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::PretenureFlag, v8::internal::Object*)
+      4    0.2%    0.2%  T _os_unfair_lock_assert_owner
+      3    0.1%    0.1%  t void std::__1::__sort<v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&, v8::base::AtomicElement<v8::internal::Smi*>*>(v8::base::AtomicElement<v8::internal::Smi*>*, v8::base::AtomicElement<v8::internal::Smi*>*, v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&)
+      3    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      3    0.1%    0.1%  t v8::internal::JSObject::WriteToField(int, v8::internal::PropertyDetails, v8::internal::Object*)
+      3    0.1%    0.1%  t v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::Resize(v8::base::DefaultAllocationPolicy)
+      3    0.1%    0.1%  t v8::base::TemplateHashMapEntry<void*, void*>* v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert<v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::base::DefaultAllocationPolicy)::'lambda'()>(void* const&, unsigned int, v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::base::DefaultAllocationPolicy)::'lambda'() const&, v8::base::DefaultAllocationPolicy)
+      3    0.1%    0.1%  t unsigned int v8::internal::StringHasher::HashSequentialString<unsigned char>(unsigned char const*, int, unsigned int)
+      3    0.1%    0.1%  t __os_unfair_lock_unlock_slow
+      3    0.1%    0.1%  T v8::internal::compiler::GraphReducer::ReduceTop()
+      3    0.1%    0.1%  T v8::internal::StackFrameIterator::StackFrameIterator(v8::internal::Isolate*, v8::internal::ThreadLocalTop*)
+      3    0.1%    0.1%  T v8::internal::JsonParser<true>::ScanJsonString()
+      3    0.1%    0.1%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash(v8::internal::StringTable*)
+      3    0.1%    0.1%  T v8::internal::BuiltinDeserializer::ExtractCodeObjectSize(int)
+      3    0.1%    0.1%  T v8::internal::Bitmap::Clear()
+      3    0.1%    0.1%  T v8::internal::Accessors::FunctionLengthGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      3    0.1%    0.1%  T _os_unfair_lock_lock_no_tsd_4libpthread
+      3    0.1%    0.1%  T ___getrlimit
+      2    0.1%    0.1%  t void v8::internal::Scanner::Advance<false, true>()
+      2    0.1%    0.1%  t v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      2    0.1%    0.1%  t v8::internal::String::Get(int)
+      2    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseStatementListItem(bool*)
+      2    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::ParseExpressionCoverGrammar(bool, bool*)
+      2    0.1%    0.1%  t v8::internal::ParserBase<v8::internal::Parser>::BindingPatternUnexpectedToken()
+      2    0.1%    0.1%  t v8::internal::MaybeHandle<v8::internal::Object> v8::internal::(anonymous namespace)::HandleApiCallHelper<false>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::FunctionTemplateInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::BuiltinArguments)
+      2    0.1%    0.1%  t v8::internal::LookupIterator::LookupIterator(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      2    0.1%    0.1%  t v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::Add(v8::internal::Handle<v8::internal::NameDictionary>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDetails, int*)
+      2    0.1%    0.1%  t v8::internal::ConsString* v8::internal::String::VisitFlat<v8::internal::IteratingStringHasher>(v8::internal::IteratingStringHasher*, v8::internal::String*, int)
+      2    0.1%    0.1%  t v8::internal::(anonymous namespace)::UpdateDescriptorForValue(v8::internal::Handle<v8::internal::Map>, int, v8::internal::PropertyConstness, v8::internal::Handle<v8::internal::Object>)
+      2    0.1%    0.1%  t v8::internal::(anonymous namespace)::JSObjectWalkVisitor<v8::internal::AllocationSiteUsageContext>::StructureWalk(v8::internal::Handle<v8::internal::JSObject>)
+      2    0.1%    0.1%  t std::__1::vector<v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*, v8::internal::ZoneAllocator<v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*> >::__append(unsigned long)
+      2    0.1%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t node::fs::Fsync(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t _tiny_malloc_from_free_list
+      2    0.1%    0.1%  t __os_lock_unfair_trylock
+      2    0.1%    0.1%  t ___find_warguments
+      2    0.1%    0.1%  T v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterListFreeEvent(v8::internal::interpreter::RegisterList)
+      2    0.1%    0.1%  T v8::internal::interpreter::BytecodeRegisterOptimizer::PrepareOutputRegister(v8::internal::interpreter::Register)
+      2    0.1%    0.1%  T v8::internal::Zone::New(unsigned long)
+      2    0.1%    0.1%  T v8::internal::TransitionsAccessor::Insert(v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Map>, v8::internal::SimpleTransitionFlag)
+      2    0.1%    0.1%  T v8::internal::String::ComputeAndSetHash()
+      2    0.1%    0.1%  T v8::internal::StackFrameIterator::Advance()
+      2    0.1%    0.1%  T v8::internal::StackFrame::ComputeType(v8::internal::StackFrameIteratorBase const*, v8::internal::StackFrame::State*)
+      2    0.1%    0.1%  T v8::internal::Space::AllocationStep(int, unsigned char*, int)
+      2    0.1%    0.1%  T v8::internal::Scanner::Next()
+      2    0.1%    0.1%  T v8::internal::MarkCompactCollector::ClearWeakCellsAndSimpleMapTransitions(v8::internal::DependentCode**)
+      2    0.1%    0.1%  T v8::internal::Map::EnsureDescriptorSlack(v8::internal::Handle<v8::internal::Map>, int)
+      2    0.1%    0.1%  T v8::internal::Log::MessageBuilder::WriteToLogFile()
+      2    0.1%    0.1%  T v8::internal::LoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>)
+      2    0.1%    0.1%  T v8::internal::Heap::NotifyObjectLayoutChange(v8::internal::HeapObject*, int, v8::internal::PerThreadAssertScopeDebugOnly<(v8::internal::PerThreadAssertType)0, false> const&)
+      2    0.1%    0.1%  T v8::internal::Heap::InitializeJSObjectBody(v8::internal::JSObject*, v8::internal::Map*, int)
+      2    0.1%    0.1%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::EnsureCapacity(v8::internal::Handle<v8::internal::StringTable>, int, v8::internal::PretenureFlag)
+      2    0.1%    0.1%  T v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*)
+      2    0.1%    0.1%  T v8::internal::FeedbackVector::New(v8::internal::Isolate*, v8::internal::Handle<v8::internal::SharedFunctionInfo>)
+      2    0.1%    0.1%  T v8::internal::FeedbackNexus::StateFromFeedback() const
+      2    0.1%    0.1%  T v8::internal::Accessors::FunctionPrototypeGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::contextify::ContextifyScript::RunInContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::NodePlatform::MonotonicallyIncreasingTime()
+      2    0.1%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T _uv_hrtime
+      2    0.1%    0.1%  T _renameat
+      2    0.1%    0.1%  T _fdopen
+      2    0.1%    0.1%  T ___kdebug_trace_string
+      1    0.0%    0.0%  t void v8::internal::String::WriteToFlat<unsigned short>(v8::internal::String*, unsigned short*, int, int)
+      1    0.0%    0.0%  t void v8::internal::LookupIterator::NextInternal<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      1    0.0%    0.0%  t void std::__1::vector<v8::internal::Scope*, std::__1::allocator<v8::internal::Scope*> >::__push_back_slow_path<v8::internal::Scope* const&>(v8::internal::Scope* const&&&)
+      1    0.0%    0.0%  t v8::internal::interpreter::InterpreterCompilationJob::~InterpreterCompilationJob()
+      1    0.0%    0.0%  t v8::internal::interpreter::BytecodeGenerator::ControlScopeForBreakable::Execute(v8::internal::interpreter::BytecodeGenerator::ControlScope::Command, v8::internal::Statement*, int)
+      1    0.0%    0.0%  t v8::internal::compiler::ScheduleLateNodeVisitor::ProcessQueue(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  t v8::internal::compiler::NodeAuxData<v8::internal::compiler::FunctionalList<v8::internal::compiler::LoopVariableOptimizer::Constraint>, &(v8::internal::compiler::FunctionalList<v8::internal::compiler::LoopVariableOptimizer::Constraint> v8::internal::compiler::DefaultConstruct<v8::internal::compiler::FunctionalList<v8::internal::compiler::LoopVariableOptimizer::Constraint> >())>::Set(v8::internal::compiler::Node*, v8::internal::compiler::FunctionalList<v8::internal::compiler::LoopVariableOptimizer::Constraint> const&)
+      1    0.0%    0.0%  t v8::internal::compiler::(anonymous namespace)::UpdateOutLiveness(v8::internal::interpreter::Bytecode, v8::internal::compiler::BytecodeLivenessState&, v8::internal::compiler::BytecodeLivenessState*, v8::internal::interpreter::BytecodeArrayAccessor const&, v8::internal::compiler::BytecodeLivenessMap const&)
+      1    0.0%    0.0%  t v8::internal::StoreFastElementStub::MajorKey() const
+      1    0.0%    0.0%  t v8::internal::PrototypeIterator::Advance()
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression(bool*, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberWithNewPrefixesExpression(bool*, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberExpressionContinuation(v8::internal::Expression*, bool*, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseMemberExpression(bool*, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ArrowFormalParametersUnexpectedToken()
+      1    0.0%    0.0%  t v8::internal::PagedSpace::is_local()
+      1    0.0%    0.0%  t v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::LookupIterator::Configuration)
+      1    0.0%    0.0%  t v8::internal::LocalAllocator::AllocateInLAB(int, v8::internal::AllocationAlignment)
+      1    0.0%    0.0%  t v8::internal::LargeObjectSpace::SizeOfObjects()
+      1    0.0%    0.0%  t v8::internal::HashTable<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::EnsureCapacity(v8::internal::Handle<v8::internal::NameDictionary>, int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  t v8::internal::FeedbackVectorSpec::append(v8::internal::FeedbackSlotKind)
+      1    0.0%    0.0%  t v8::internal::EnumerateCompiledFunctions(v8::internal::Heap*, v8::internal::Handle<v8::internal::SharedFunctionInfo>*, v8::internal::Handle<v8::internal::AbstractCode>*)
+      1    0.0%    0.0%  t v8::internal::DescriptorArray::Append(v8::internal::Descriptor*)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::StringTableNoAllocateKey::IsMatch(v8::internal::Object*)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::ObjectBoilerplate::Create(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::MakeStringThin(v8::internal::String*, v8::internal::String*, v8::internal::Isolate*)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::InstantiateObject(v8::internal::Isolate*, v8::internal::Handle<v8::internal::ObjectTemplateInfo>, v8::internal::Handle<v8::internal::JSReceiver>, bool, bool)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::InstantiateFunction(v8::internal::Isolate*, v8::internal::Handle<v8::internal::FunctionTemplateInfo>, v8::internal::MaybeHandle<v8::internal::Name>)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastHoleyObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)3> >::DirectCollectElementIndicesImpl(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::FixedArrayBase>, v8::internal::GetKeysConversion, v8::internal::PropertyFilter, v8::internal::Handle<v8::internal::FixedArray>, unsigned int*, unsigned int)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastHoleyObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)3> >::Add(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, unsigned int)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::CopyObjectToObjectElements(v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int)
+      1    0.0%    0.0%  t v8::base::TemplateHashMapImpl<long, unsigned int, v8::base::KeyEqualityMatcher<long>, v8::internal::ZoneAllocationPolicy>::Resize(v8::internal::ZoneAllocationPolicy)
+      1    0.0%    0.0%  t v8::base::TemplateHashMapEntry<void*, void*>* v8::base::TemplateHashMapImpl<void*, void*, v8::base::KeyEqualityMatcher<void*>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert<v8::base::TemplateHashMapImpl<void*, void*, v8::base::KeyEqualityMatcher<void*>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)::'lambda'()>(void* const&, unsigned int, v8::base::TemplateHashMapImpl<void*, void*, v8::base::KeyEqualityMatcher<void*>, v8::internal::ZoneAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::internal::ZoneAllocationPolicy)::'lambda'() const&, v8::internal::ZoneAllocationPolicy)
+      1    0.0%    0.0%  t v8::Maybe<bool> v8::internal::JSObject::PreventExtensionsWithTransition<(v8::internal::PropertyAttributes)5>(v8::internal::Handle<v8::internal::JSObject>, v8::internal::ShouldThrow)
+      1    0.0%    0.0%  t unsigned int std::__1::__sort3<v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&, v8::base::AtomicElement<v8::internal::Smi*>*>(v8::base::AtomicElement<v8::internal::Smi*>*, v8::base::AtomicElement<v8::internal::Smi*>*, v8::base::AtomicElement<v8::internal::Smi*>*, v8::internal::EnumIndexComparator<v8::internal::NameDictionary>&)
+      1    0.0%    0.0%  t std::__1::vector<std::__1::locale::facet*, std::__1::__sso_allocator<std::__1::locale::facet*, 28ul> >::__append(unsigned long)
+      1    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.0%    0.0%  t std::__1::locale::__imp::__imp(std::__1::locale::__imp const&, std::__1::locale::__imp const&, int)
+      1    0.0%    0.0%  t std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > std::__1::num_get<wchar_t, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> > >::__do_get_floating_point<long double>(std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::istreambuf_iterator<wchar_t, std::__1::char_traits<wchar_t> >, std::__1::ios_base&, unsigned int&, long double&) const
+      1    0.0%    0.0%  t node::MaybeStackBuffer<char, 1024ul>::AllocateSufficientStorage(unsigned long)
+      1    0.0%    0.0%  t node::Buffer::(anonymous namespace)::SetupBufferJS(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::SignalWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::IsSet(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t _update_cache_for_file_streams
+      1    0.0%    0.0%  t _szone_pressure_relief
+      1    0.0%    0.0%  t _szone_batch_free
+      1    0.0%    0.0%  t _mvm_allocate_pages
+      1    0.0%    0.0%  t __platform_memmove$VARIANT$Base
+      1    0.0%    0.0%  t __mkpath
+      1    0.0%    0.0%  t ___vfprintf
+      1    0.0%    0.0%  t ___fputwc
+      1    0.0%    0.0%  T void v8::internal::LookupIterator::Start<false>()
+      1    0.0%    0.0%  T void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T v8::internal::interpreter::ConstantArrayBuilder::Insert(v8::internal::AstRawString const*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*, v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeRegisterOptimizer::Materialize(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeRegisterOptimizer::GetInputRegisterList(v8::internal::interpreter::RegisterList)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeRegisterOptimizer::GetInputRegister(v8::internal::interpreter::Register)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeRegisterOptimizer::CreateMaterializedEquivalent(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::VisitIfStatement(v8::internal::IfStatement*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::VisitForTest(v8::internal::Expression*, v8::internal::interpreter::BytecodeLabels*, v8::internal::interpreter::BytecodeLabels*, v8::internal::interpreter::BytecodeGenerator::TestFallthrough)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::VisitBlock(v8::internal::Block*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::BytecodeGenerator(v8::internal::CompilationInfo*, v8::internal::AstStringConstants const*, v8::internal::ZoneVector<v8::internal::FunctionLiteral*>*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::BuildNewLocalActivationContext()
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayWriter::Write(v8::internal::interpreter::BytecodeNode*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayWriter::ToBytecodeArray(v8::internal::Isolate*, int, int, v8::internal::Handle<v8::internal::ByteArray>)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayBuilder::CallUndefinedReceiver(v8::internal::interpreter::Register, v8::internal::interpreter::RegisterList, int)
+      1    0.0%    0.0%  T v8::internal::compiler::NodeProperties::IsControlEdge(v8::internal::compiler::Edge)
+      1    0.0%    0.0%  T v8::internal::compiler::NodeProperties::GetTypeOrAny(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::LiveRangeBuilder::Use(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType)
+      1    0.0%    0.0%  T v8::internal::compiler::InstructionSelector::InitializeCallBuffer(v8::internal::compiler::Node*, v8::internal::compiler::CallBuffer*, v8::base::Flags<v8::internal::compiler::InstructionSelector::CallBufferFlag, int>, bool, int)
+      1    0.0%    0.0%  T v8::internal::compiler::GraphReducer::Replace(v8::internal::compiler::Node*, v8::internal::compiler::Node*, unsigned int)
+      1    0.0%    0.0%  T v8::internal::compiler::CodeGenerator::AssembleInstruction(v8::internal::compiler::Instruction*, v8::internal::compiler::InstructionBlock const*)
+      1    0.0%    0.0%  T v8::internal::compiler::CheckpointElimination::Reduce(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::BytecodeGraphBuilder::MakeNode(v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node* const*, bool)
+      1    0.0%    0.0%  T v8::internal::compiler::BranchElimination::ReduceDeoptimizeConditional(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::BitsetType::Lub(v8::internal::Map*)
+      1    0.0%    0.0%  T v8::internal::Zone::Zone(v8::internal::AccountingAllocator*, char const*, v8::internal::SegmentSize)
+      1    0.0%    0.0%  T v8::internal::TransitionsAccessor::SearchTransition(v8::internal::Name*, v8::internal::PropertyKind, v8::internal::PropertyAttributes)
+      1    0.0%    0.0%  T v8::internal::StubCache::Set(v8::internal::Name*, v8::internal::Map*, v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::String::SlowFlatten(v8::internal::Handle<v8::internal::ConsString>, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  T v8::internal::String::SlowEquals(v8::internal::String*)
+      1    0.0%    0.0%  T v8::internal::String::IsOneByteEqualTo(v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  T v8::internal::StoreHandler::ValidHandlerOrNull(v8::internal::Object*, v8::internal::Name*, v8::internal::Handle<v8::internal::Map>*)
+      1    0.0%    0.0%  T v8::internal::StoreHandler::StoreTransition(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>)
+      1    0.0%    0.0%  T v8::internal::StandardFrame::ComputeCallerState(v8::internal::StackFrame::State*) const
+      1    0.0%    0.0%  T v8::internal::StackLimitCheck::JsHasOverflowed(unsigned long) const
+      1    0.0%    0.0%  T v8::internal::StackFrameIterator::StackFrameIterator(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::SourcePositionTableBuilder::AddEntry(v8::internal::PositionTableEntry const&)
+      1    0.0%    0.0%  T v8::internal::Script::GetPositionInfo(int, v8::internal::Script::PositionInfo*, v8::internal::Script::OffsetFlag) const
+      1    0.0%    0.0%  T v8::internal::ScopeInfo::language_mode()
+      1    0.0%    0.0%  T v8::internal::Scope::ResolveVariablesRecursively(v8::internal::ParseInfo*)
+      1    0.0%    0.0%  T v8::internal::Scope::NewTemporary(v8::internal::AstRawString const*)
+      1    0.0%    0.0%  T v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)
+      1    0.0%    0.0%  T v8::internal::Scanner::Scanner(v8::internal::UnicodeCache*)
+      1    0.0%    0.0%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::RegExpParser::Advance()
+      1    0.0%    0.0%  T v8::internal::Parser::ParseFunctionLiteral(v8::internal::AstRawString const*, v8::internal::Scanner::Location, v8::internal::FunctionNameValidity, v8::internal::FunctionKind, int, v8::internal::FunctionLiteral::FunctionType, v8::internal::LanguageMode, v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    0.0%    0.0%  T v8::internal::Parser::ParseFunction(v8::internal::Isolate*, v8::internal::ParseInfo*, v8::internal::Handle<v8::internal::SharedFunctionInfo>)
+      1    0.0%    0.0%  T v8::internal::Parser::ParseFunction(v8::internal::AstRawString const*, int, v8::internal::FunctionKind, v8::internal::FunctionLiteral::FunctionType, v8::internal::DeclarationScope*, int*, int*, bool*, int*, int*, v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    0.0%    0.0%  T v8::internal::Parser::CloseTemplateLiteral(v8::internal::Parser::TemplateLiteral**, int, v8::internal::Expression*)
+      1    0.0%    0.0%  T v8::internal::OrderedHashMap::GetHash(v8::internal::Isolate*, v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::Object::StrictEquals(v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::Object::GetPropertyWithAccessor(v8::internal::LookupIterator*)
+      1    0.0%    0.0%  T v8::internal::Object::GetProperty(v8::internal::LookupIterator*)
+      1    0.0%    0.0%  T v8::internal::Object::CreateListFromArrayLike(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::ElementTypes)
+      1    0.0%    0.0%  T v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+      1    0.0%    0.0%  T v8::internal::OFStreamBase::overflow(int)
+      1    0.0%    0.0%  T v8::internal::MarkCompactCollector::ProcessWeakCollections()
+      1    0.0%    0.0%  T v8::internal::Map::WeakCellForMap(v8::internal::Handle<v8::internal::Map>)
+      1    0.0%    0.0%  T v8::internal::Map::UpdateFieldType(int, v8::internal::Handle<v8::internal::Name>, v8::internal::PropertyConstness, v8::internal::Representation, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  T v8::internal::Map::TransitionToDataProperty(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::PropertyConstness, v8::internal::Object::StoreFromKeyed, bool*)
+      1    0.0%    0.0%  T v8::internal::Map::SetPrototype(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Object>, bool)
+      1    0.0%    0.0%  T v8::internal::Map::CopyWithField(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::FieldType>, v8::internal::PropertyAttributes, v8::internal::PropertyConstness, v8::internal::Representation, v8::internal::TransitionFlag)
+      1    0.0%    0.0%  T v8::internal::Map::Copy(v8::internal::Handle<v8::internal::Map>, char const*)
+      1    0.0%    0.0%  T v8::internal::LookupIterator::PrepareTransitionToDataProperty(v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::StoreFromKeyed)
+      1    0.0%    0.0%  T v8::internal::LookupIterator::GetDataValue() const
+      1    0.0%    0.0%  T v8::internal::LoadIC::ComputeHandler(v8::internal::LookupIterator*)
+      1    0.0%    0.0%  T v8::internal::LoadGlobalIC::Load(v8::internal::Handle<v8::internal::Name>)
+      1    0.0%    0.0%  T v8::internal::LayoutDescriptor::New(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::DescriptorArray>, int)
+      1    0.0%    0.0%  T v8::internal::JsonParser<false>::ScanJsonString()
+      1    0.0%    0.0%  T v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      1    0.0%    0.0%  T v8::internal::JSObject::DefineOwnPropertyIgnoreAttributes(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::ShouldThrow, v8::internal::JSObject::AccessorInfoHandling)
+      1    0.0%    0.0%  T v8::internal::JSFunction::EnsureFeedbackVector(v8::internal::Handle<v8::internal::JSFunction>)
+      1    0.0%    0.0%  T v8::internal::IteratingStringHasher::VisitConsString(v8::internal::ConsString*)
+      1    0.0%    0.0%  T v8::internal::Isolate::SymbolFor(v8::internal::Heap::RootListIndex, v8::internal::Handle<v8::internal::String>, bool)
+      1    0.0%    0.0%  T v8::internal::InterpretedFrame::Summarize(std::__1::vector<v8::internal::FrameSummary, std::__1::allocator<v8::internal::FrameSummary> >*) const
+      1    0.0%    0.0%  T v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+      1    0.0%    0.0%  T v8::internal::IC::ConfigureVectorState(v8::internal::InlineCacheState, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  T v8::internal::Heap::InitializeJSObjectFromMap(v8::internal::JSObject*, v8::internal::Object*, v8::internal::Map*)
+      1    0.0%    0.0%  T v8::internal::Heap::CreateFillerObjectAt(unsigned char*, int, v8::internal::ClearRecordedSlots)
+      1    0.0%    0.0%  T v8::internal::Heap::CopyJSObject(v8::internal::JSObject*, v8::internal::AllocationSite*)
+      1    0.0%    0.0%  T v8::internal::Heap::AllocateRawOneByteString(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  T v8::internal::Heap::AllocateFeedbackVector(v8::internal::SharedFunctionInfo*, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  T v8::internal::Heap::Allocate(v8::internal::Map*, v8::internal::AllocationSpace, v8::internal::AllocationSite*)
+      1    0.0%    0.0%  T v8::internal::HandleScope::DeleteExtensions(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::GetRandomMmapAddr()
+      1    0.0%    0.0%  T v8::internal::GCTracer::NewSpaceAllocationThroughputInBytesPerMillisecond(double) const
+      1    0.0%    0.0%  T v8::internal::FreeList::Allocate(unsigned long, unsigned long*)
+      1    0.0%    0.0%  T v8::internal::FeedbackVector::GetKind(v8::internal::FeedbackSlot) const
+      1    0.0%    0.0%  T v8::internal::FeedbackMetadata::New(v8::internal::Isolate*, v8::internal::FeedbackVectorSpec const*)
+      1    0.0%    0.0%  T v8::internal::Factory::NewOneByteInternalizedString(v8::internal::Vector<unsigned char const>, unsigned int)
+      1    0.0%    0.0%  T v8::internal::Factory::NewNoClosuresCell(v8::internal::Handle<v8::internal::HeapObject>)
+      1    0.0%    0.0%  T v8::internal::Factory::NewHeapNumber(v8::internal::MutableMode, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  T v8::internal::Factory::NewFixedArray(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  T v8::internal::Factory::InternalizedStringMapForString(v8::internal::Handle<v8::internal::String>)
+      1    0.0%    0.0%  T v8::internal::Deserializer<v8::internal::DefaultDeserializerAllocator>::ReadData(v8::internal::Object**, v8::internal::Object**, int, unsigned char*)
+      1    0.0%    0.0%  T v8::internal::DescriptorArray::CopyFrom(int, v8::internal::DescriptorArray*)
+      1    0.0%    0.0%  T v8::internal::DeclarationScope::DeclareDefaultFunctionVariables(v8::internal::AstValueFactory*)
+      1    0.0%    0.0%  T v8::internal::DeclarationScope::AllocateParameter(v8::internal::Variable*, int)
+      1    0.0%    0.0%  T v8::internal::ContextSlotCache::Lookup(v8::internal::Object*, v8::internal::String*, v8::internal::VariableMode*, v8::internal::InitializationFlag*, v8::internal::MaybeAssignedFlag*)
+      1    0.0%    0.0%  T v8::internal::Compiler::Compile(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Compiler::ClearExceptionFlag)
+      1    0.0%    0.0%  T v8::internal::CompilationCacheTable::Age()
+      1    0.0%    0.0%  T v8::internal::AstValueFactory::Internalize(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  T v8::internal::AstRawString::AsArrayIndex(unsigned int*) const
+      1    0.0%    0.0%  T v8::internal::Assembler::bind_to(v8::internal::Label*, int)
+      1    0.0%    0.0%  T v8::internal::AllocationResult v8::internal::Heap::AllocateInternalizedStringImpl<true, v8::internal::String*>(v8::internal::String*, int, unsigned int)
+      1    0.0%    0.0%  T v8::internal::Accessors::ErrorStackGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T v8::base::Time::ToJsTime() const
+      1    0.0%    0.0%  T v8::String::Length() const
+      1    0.0%    0.0%  T v8::Context::Enter()
+      1    0.0%    0.0%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::getline(wchar_t*, long)
+      1    0.0%    0.0%  T std::__1::basic_istream<wchar_t, std::__1::char_traits<wchar_t> >::get(std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >&, wchar_t)
+      1    0.0%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.0%    0.0%  T node::NodePlatform::IdleTasksEnabled(v8::Isolate*)
+      1    0.0%    0.0%  T _sscanf
+      1    0.0%    0.0%  T _ptrace
+      1    0.0%    0.0%  T _os_unfair_lock_assert_not_owner
+      1    0.0%    0.0%  T _mig_allocate
+      1    0.0%    0.0%  T _getsgroups_np
+      1    0.0%    0.0%  T _fprintf_l
+      1    0.0%    0.0%  T ___fread
+      1    0.0%    0.0%  T _OPENSSL_LH_insert
+      1    0.0%    0.0%  I std::bad_array_new_length::~bad_array_new_length()
+
+ [Summary]:
+   ticks  total  nonlib   name
+     99    4.8%    4.9%  JavaScript
+   1727   84.0%   84.9%  C++
+     43    2.1%    2.1%  GC
+     22    1.1%          Shared libraries
+    208   10.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    733   43.7%   35.7%  T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+    467   27.8%   22.7%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+    151    9.0%    7.3%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+     27    1.6%    1.3%  T v8::ArrayBuffer::GetContents()
+     21    1.3%    1.0%  t _internal_catch_exception_raise_state_identity
+     21    1.3%    1.0%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     21    1.3%    1.0%  T v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+     19    1.1%    0.9%  T _mlockall
+     18    1.1%    0.9%  t _uv__hrtime
+     15    0.9%    0.7%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     14    0.8%    0.7%  T v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     13    0.8%    0.6%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+     11    0.7%    0.5%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     11    0.7%    0.5%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+     10    0.6%    0.5%  T _faccessat
+      8    0.5%    0.4%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    0.4%    0.3%  T v8::internal::Runtime_StringCharCodeAt(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    0.4%    0.3%  T v8::ArrayBufferView::Buffer()
+      6    0.4%    0.3%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.4%    0.3%  T v8::internal::JSTypedArray::GetBuffer()
+      5    0.3%    0.2%  T v8::internal::Runtime_ObjectKeys(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.3%    0.2%  T v8::internal::Builtin_DateNow(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.2%    0.2%  T v8::internal::StringTable::LookupStringIfExists_NoAllocate(v8::internal::String*)
+      4    0.2%    0.2%  T v8::internal::Runtime_DefineDataPropertyInLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.2%    0.2%  T v8::internal::OrderedHashMap::GetHash(v8::internal::Isolate*, v8::internal::Object*)
+      4    0.2%    0.2%  T v8::internal::Builtin_ErrorCaptureStackTrace(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  t node::(anonymous namespace)::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.1%  T v8::internal::Runtime_NewClosure(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_CreateRegExpLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Builtin_StringPrototypeLastIndexOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Builtin_ObjectDefineProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_NewClosure_Tenured(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_LoadGlobalIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_DateCurrentTime(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_CreateListFromArrayLike(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Builtin_ErrorConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T v8::internal::Builtin_DateConstructor_ConstructStub(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  T _uv_hrtime
+      1    0.1%    0.0%  t void v8::internal::String::WriteToFlat<unsigned short>(v8::internal::String*, unsigned short*, int, int)
+      1    0.1%    0.0%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+      1    0.1%    0.0%  t void v8::internal::LookupIterator::NextInternal<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      1    0.1%    0.0%  t v8::internal::(anonymous namespace)::StringTableNoAllocateKey::IsMatch(v8::internal::Object*)
+      1    0.1%    0.0%  t v8::internal::(anonymous namespace)::MakeStringThin(v8::internal::String*, v8::internal::String*, v8::internal::Isolate*)
+      1    0.1%    0.0%  t node::MaybeStackBuffer<char, 1024ul>::AllocateSufficientStorage(unsigned long)
+      1    0.1%    0.0%  T v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_StringIndexOfUnchecked(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_StringEqual(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_RegExpReplace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_LoadFromSuper(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_DeleteProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_ArrayIndexOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_AddDictionaryProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Map::TransitionToDataProperty(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::PropertyConstness, v8::internal::Object::StoreFromKeyed, bool*)
+      1    0.1%    0.0%  T v8::internal::Builtin_SymbolFor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_ObjectPrototypeSetProto(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_ObjectFreeze(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_ObjectAssign(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::String::Length() const
+      1    0.1%    0.0%  T node::tracing::TraceEventHelper::GetTracingController()
+      1    0.1%    0.0%  T node::contextify::ContextifyContext::PropertyGetterCallback(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    635   30.9%  T node::contextify::ContextifyContext::PropertyGetterCallback(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+    635  100.0%    T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+    632   99.5%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+    632  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+    632  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+    632  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+
+    358   17.4%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+    358  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     37   10.3%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+     37  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:111:34
+      5   13.5%          Script: ~<anonymous> util.js:1:11
+      5  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      4   10.8%          Script: ~<anonymous> internal/child_process.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      4   10.8%          Script: ~<anonymous> assert.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      3    8.1%          Script: ~<anonymous> stream.js:1:11
+      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      3    8.1%          Script: ~<anonymous> internal/fs/promises.js:1:11
+      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    5.4%          Script: ~<anonymous> internal/async_hooks.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    5.4%          Script: ~<anonymous> fs.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    5.4%          Script: ~<anonymous> child_process.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    5.4%          LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      2  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:16:30
+      2    5.4%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:292:32
+      2  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    2.7%          Script: ~<anonymous> perf_hooks.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          Script: ~<anonymous> net.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          Script: ~<anonymous> internal/url.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          Script: ~<anonymous> internal/process.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          Script: ~<anonymous> buffer.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          Script: ~<anonymous> _stream_readable.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    2.7%          LazyCompile: ~setupNextTick internal/process/next_tick.js:5:23
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    2.7%          LazyCompile: ~setupChannel internal/process.js:236:22
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+     33    9.2%      LazyCompile: ~_transformAndBuildScript /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:292:27
+     33  100.0%        LazyCompile: ~transform /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:331:12
+     33  100.0%          LazyCompile: ~_execModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:403:14
+     33  100.0%            LazyCompile: ~requireModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:226:16
+     16    4.5%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+     16  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+     16  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+     16  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      7    2.0%      LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      2   28.6%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      2  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      2  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      2   28.6%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      2  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      2  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLTextAreaElement.js:1:11
+      1  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      1   14.3%        LazyCompile: ~_load_jestMock /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:11:24
+      1  100.0%          LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      1  100.0%            LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:17:42
+      1   14.3%        LazyCompile: ~_load_create_process_object /Users/colch/Downloads/temp/node_modules/jest-util/build/install_common_globals.js:34:37
+      1  100.0%          LazyCompile: ~exports.default /Users/colch/Downloads/temp/node_modules/jest-util/build/install_common_globals.js:7:28
+      1  100.0%            LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      6    1.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:1:11
+      6  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      6  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      6  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      6    1.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      6  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      6  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      6  100.0%            LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      6    1.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/path/replacement.js:1:11
+      6  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/path/index.js:1:11
+      6  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/index.js:1:11
+      6  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-template/lib/index.js:1:11
+      6    1.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/path/index.js:1:11
+      6  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/index.js:1:11
+      6  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-template/lib/index.js:1:11
+      6  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-helpers/lib/helpers.js:1:11
+      5    1.4%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/tough-cookie/lib/cookie.js:1:11
+      5  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      5  100.0%          LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      5  100.0%            LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      4    1.1%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      4  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      4  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      4  100.0%            LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      4    1.1%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      4  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      4  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      4  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      4    1.1%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      4  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      4  100.0%          LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      4  100.0%            LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      4    1.1%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/cssstyle/lib/CSSStyleDeclaration.js:1:11
+      4  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      4  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      4  100.0%            LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      4    1.1%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/compile/_rules.js:1:11
+      4  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/compile/rules.js:1:11
+      4  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/ajv.js:1:11
+      4  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/har-validator/lib/promise.js:1:11
+
+    208   10.1%  UNKNOWN
+     25   12.0%    LazyCompile: *now perf_hooks.js:415:6
+     25  100.0%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     25  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     25  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     25  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+     15    7.2%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     15  100.0%      LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     15  100.0%        LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     15  100.0%          LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+     15  100.0%            LazyCompile: ~resolve /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/queue_runner.js:39:31
+     10    4.8%    LazyCompile: *realpathSync fs.js:1622:40
+      7   70.0%      LazyCompile: *Module._findPath internal/modules/cjs/loader.js:212:28
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/object-keys/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/define-properties/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/util.promisify/index.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/keys.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/_baseAssign.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/_baseClone.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/_arrayLikeKeys.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/keys.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/_baseAssign.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/es6.array.iterator.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/web.dom.iterable.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/fn/get-iterator.js:1:11
+      1   14.3%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/_array-methods.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/_collection.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/es6.map.js:1:11
+      1   14.3%        LazyCompile: ~_load_slash /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:69:21
+      1  100.0%          LazyCompile: ~_getFileCachePath /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:141:20
+      1  100.0%            LazyCompile: ~transformSource /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:211:18
+      1   10.0%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/NamedNodeMap.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Element.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:1:11
+      1   10.0%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/attributes.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/node.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Node-impl.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Node.js:1:11
+      1   10.0%      LazyCompile: ~resolveNodeModule /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:132:31
+      1  100.0%        LazyCompile: ~resolveModule /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:98:16
+      1  100.0%          LazyCompile: ~_getVirtualMockPath /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:252:22
+      1  100.0%            LazyCompile: ~_getAbsolutPath /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:241:18
+      9    4.3%    LazyCompile: ~resolveNodeModule /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:132:31
+      9  100.0%      LazyCompile: ~resolveModule /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:98:16
+      9  100.0%        LazyCompile: ~_getVirtualMockPath /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:252:22
+      9  100.0%          LazyCompile: ~_getAbsolutPath /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:241:18
+      9  100.0%            LazyCompile: ~getModuleID /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:219:14
+      6    2.9%    T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+      6  100.0%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+      6  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+      6  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+      6  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+      4    1.9%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   50.0%      LazyCompile: ~_execModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:403:14
+      2  100.0%        LazyCompile: ~requireModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:226:16
+      1   50.0%          LazyCompile: ~requireModuleOrMock /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:333:22
+      1  100.0%            LazyCompile: ~Object.<anonymous> /Users/colch/Downloads/temp/node_modules/pngjs/lib/parser-sync.js:1:32
+      1   50.0%          LazyCompile: ~requireInternalModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:273:24
+      1  100.0%            LazyCompile: ~options.isInternalModule.moduleName /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:556:65
+      1   25.0%      LazyCompile: ~pp$3.parseObjectProperty /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:4113:37
+      1  100.0%        LazyCompile: ~pp$3.parseObjPropValue /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:4139:35
+      1  100.0%          LazyCompile: ~pp$3.parseObj /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:3963:26
+      1  100.0%            LazyCompile: ~pp$2.parseBindingAtom /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:3072:34
+      1   25.0%      LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-cli/build/test_scheduler.js:147:48
+      4    1.9%    LazyCompile: ~_transformAndBuildScript /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:292:27
+      4  100.0%      LazyCompile: ~transform /Users/colch/Downloads/temp/node_modules/jest-runtime/build/script_transformer.js:331:12
+      4  100.0%        LazyCompile: ~_execModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:403:14
+      4  100.0%          LazyCompile: ~requireModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:226:16
+      2   50.0%            LazyCompile: ~requireModuleOrMock /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:333:22
+      2   50.0%            LazyCompile: ~requireInternalModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:273:24
+      3    1.4%    LazyCompile: ~hrtime internal/process.js:103:35
+      3  100.0%      LazyCompile: ~now perf_hooks.js:140:13
+      3  100.0%        LazyCompile: ~now perf_hooks.js:415:6
+      3  100.0%          LazyCompile: ~runCycles /Users/colch/Downloads/temp/compare.js:25:19
+      3  100.0%            LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+      3    1.4%    LazyCompile: *Module._resolveLookupPaths internal/modules/cjs/loader.js:378:38
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Element-impl.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Element.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/_object-create.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/_iter-create.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/_iter-define.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/core-js/library/modules/es6.array.iterator.js:1:11
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-types/lib/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/path/lib/virtual-types.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/path/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-traverse/lib/index.js:1:11
+      3    1.4%    LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/SVGGraphicsElement.js:1:11
+      1  100.0%        LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLTrackElement.js:1:11
+      1  100.0%        LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+      1   33.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLTableRowElement.js:1:11
+      1  100.0%        LazyCompile: *Module._load internal/modules/cjs/loader.js:480:24
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/register-elements.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/index.js:1:11
+
+     79    3.8%  LazyCompile: *now perf_hooks.js:415:6
+     79  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     79  100.0%      LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     79  100.0%        LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     79  100.0%          LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+     79  100.0%            LazyCompile: ~resolve /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/queue_runner.js:39:31
+
+     68    3.3%  T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+     68  100.0%    T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+     65   95.6%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     65  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     65  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     65  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+      2    2.9%      LazyCompile: ~MathGlobalVariableAccess /Users/colch/Downloads/temp/compare.js:44:34
+      2  100.0%        LazyCompile: ~runCycles /Users/colch/Downloads/temp/compare.js:25:19
+      2  100.0%          LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+      2  100.0%            LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+      1    1.5%      LazyCompile: *MathGlobalVariableAccess /Users/colch/Downloads/temp/compare.js:44:34
+      1  100.0%        LazyCompile: ~runCycles /Users/colch/Downloads/temp/compare.js:25:19
+      1  100.0%          LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+      1  100.0%            LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+
+     28    1.4%  T ___pthread_sigmask
+     19   67.9%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   10.5%      LazyCompile: ~_execModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:403:14
+      2  100.0%        LazyCompile: ~requireModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:226:16
+      2  100.0%          LazyCompile: ~requireInternalModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:273:24
+      2  100.0%            LazyCompile: ~options.isInternalModule.moduleName /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:556:65
+      1    5.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/events/PopStateEvent-impl.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/PopStateEvent.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1    5.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-core/lib/helpers/resolve.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-core/lib/helpers/resolve-from-possible-names.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-core/lib/helpers/resolve-plugin.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-core/lib/transformation/file/options/option-manager.js:1:11
+      1    5.3%      LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1  100.0%        Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:16:30
+      1    5.3%      LazyCompile: ~require internal/modules/cjs/helpers.js:17:19
+      1  100.0%        LazyCompile: ~_load_types /Users/colch/Downloads/temp/node_modules/jest-worker/build/child.js:14:21
+      1  100.0%          LazyCompile: ~process.on /Users/colch/Downloads/temp/node_modules/jest-worker/build/child.js:33:23
+      1  100.0%            LazyCompile: ~emit internal/child_process.js:806:16
+      1    5.3%      LazyCompile: ~promise.then /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/queue_runner.js:73:76
+      1  100.0%        t node::(anonymous namespace)::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    5.3%      LazyCompile: ~printJoin /Users/colch/Downloads/temp/node_modules/babel-generator/lib/printer.js:349:51
+      1  100.0%        LazyCompile: ~printList /Users/colch/Downloads/temp/node_modules/babel-generator/lib/printer.js:423:51
+      1  100.0%          LazyCompile: ~ObjectExpression /Users/colch/Downloads/temp/node_modules/babel-generator/lib/generators/types.js:49:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/babel-generator/lib/printer.js:297:44
+      1    5.3%      LazyCompile: ~pp$1.parseVarStatement /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:2167:35
+      1  100.0%        LazyCompile: ~pp$1.parseStatement /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:1816:32
+      1  100.0%          LazyCompile: ~pp$1.parseBlockBody /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:2255:32
+      1  100.0%            LazyCompile: ~pp$1.parseTopLevel /Users/colch/Downloads/temp/node_modules/babylon/lib/index.js:1775:31
+      1    5.3%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/node_modules/detect-indent/index.js:29:27
+      1  100.0%        LazyCompile: ~normalizeOptions /Users/colch/Downloads/temp/node_modules/babel-generator/lib/index.js:68:26
+      1  100.0%          LazyCompile: ~Generator /Users/colch/Downloads/temp/node_modules/babel-generator/lib/index.js:46:21
+      1  100.0%            LazyCompile: ~exports.default /Users/colch/Downloads/temp/node_modules/babel-generator/lib/index.js:18:28
+      1    5.3%      LazyCompile: ~matcher /Users/colch/Downloads/temp/node_modules/micromatch/index.js:279:17
+      1  100.0%        LazyCompile: ~globs.map.each /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:53:30
+      1  100.0%          LazyCompile: ~globsToMatcher /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:48:24
+      1  100.0%            LazyCompile: ~SearchSource /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:74:14
+      1    5.3%      LazyCompile: ~isSpecial /Users/colch/Downloads/temp/node_modules/whatwg-url/lib/url-state-machine.js:62:19
+      1  100.0%        LazyCompile: ~parseScheme /Users/colch/Downloads/temp/node_modules/whatwg-url/lib/url-state-machine.js:575:65
+      1  100.0%          LazyCompile: ~URLStateMachine /Users/colch/Downloads/temp/node_modules/whatwg-url/lib/url-state-machine.js:499:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /Users/colch/Downloads/temp/node_modules/whatwg-url/lib/url-state-machine.js:1249:41
+      1    5.3%      LazyCompile: ~getModule /Users/colch/Downloads/temp/node_modules/jest-haste-map/build/module_map.js:30:12
+      1  100.0%        LazyCompile: ~getModule /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:178:12
+      1  100.0%          LazyCompile: ~_isModuleResolved /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:257:20
+      1  100.0%            LazyCompile: ~_getAbsolutPath /Users/colch/Downloads/temp/node_modules/jest-resolve/build/index.js:241:18
+      1    5.3%      LazyCompile: ~extglob /Users/colch/Downloads/temp/node_modules/extglob/index.js:42:17
+      1  100.0%        LazyCompile: ~Glob.extglob /Users/colch/Downloads/temp/node_modules/micromatch/lib/glob.js:96:34
+      1  100.0%          LazyCompile: ~expand /Users/colch/Downloads/temp/node_modules/micromatch/lib/expand.js:29:16
+      1  100.0%            LazyCompile: ~toRegex /Users/colch/Downloads/temp/node_modules/micromatch/index.js:328:17
+      1    5.3%      LazyCompile: ~convert /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/MessageEventInit.js:87:10
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/events/MessageEvent-impl.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/MessageEvent.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:1:11
+      1    5.3%      LazyCompile: ~_setExports /Users/colch/Downloads/temp/node_modules/assert-plus/assert.js:98:21
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/assert-plus/assert.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/http-signature/lib/parser.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/http-signature/lib/index.js:1:11
+      1    5.3%      LazyCompile: ~Object.<anonymous> /Users/colch/Downloads/temp/compare.js:1:32
+      1  100.0%        LazyCompile: ~_execModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:403:14
+      1  100.0%          LazyCompile: ~requireModule /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:226:16
+      1  100.0%            LazyCompile: ~requireModuleOrMock /Users/colch/Downloads/temp/node_modules/jest-runtime/build/index.js:333:22
+      1    5.3%      LazyCompile: ~Join native array.js:118:14
+      1  100.0%        LazyCompile: ~InnerArrayJoin native array.js:273:24
+      1  100.0%          LazyCompile: ~join native array.js:286:46
+      1  100.0%            LazyCompile: ~_load_gracefulFs /Users/colch/Downloads/temp/node_modules/jest-haste-map/build/worker.js:74:26
+      1    5.3%      LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/index.js:116:48
+      1  100.0%        t node::(anonymous namespace)::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    3.6%    T v8::internal::Runtime_RegExpReplace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~Glob._replace /Users/colch/Downloads/temp/node_modules/micromatch/lib/glob.js:127:35
+      1  100.0%        LazyCompile: ~expand /Users/colch/Downloads/temp/node_modules/micromatch/lib/expand.js:29:16
+      1  100.0%          LazyCompile: ~toRegex /Users/colch/Downloads/temp/node_modules/micromatch/index.js:328:17
+      1  100.0%            LazyCompile: ~regexCache /Users/colch/Downloads/temp/node_modules/regex-cache/index.js:30:20
+      1    3.6%    T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~setup /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Location.js:350:8
+      1  100.0%        LazyCompile: ~createImpl /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Location.js:71:13
+      1  100.0%          LazyCompile: ~DocumentImpl /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:179:14
+      1  100.0%            LazyCompile: ~setup /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:2794:8
+      1    3.6%    T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Script: ~<anonymous> internal/errors.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1  100.0%          LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:111:34
+      1  100.0%            Script: ~<anonymous> internal/async_hooks.js:1:11
+      1    3.6%    T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~cacheResults /Users/colch/Downloads/temp/node_modules/jest-cli/build/test_sequencer.js:101:15
+      1  100.0%        LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-cli/build/run_jest.js:146:43
+      1  100.0%          LazyCompile: ~step /Users/colch/Downloads/temp/node_modules/jest-cli/build/run_jest.js:81:153
+      1  100.0%            LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-cli/build/run_jest.js:81:351
+
+     27    1.3%  T v8::ArrayBuffer::GetContents()
+     27  100.0%    LazyCompile: *now perf_hooks.js:415:6
+     27  100.0%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     27  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     27  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     27  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+
+     25    1.2%  t _internal_catch_exception_raise_state_identity
+     21   84.0%    LazyCompile: *now perf_hooks.js:415:6
+     21  100.0%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     21  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     21  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     21  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+      2    8.0%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      LazyCompile: ~baseFindIndex /Users/colch/Downloads/temp/node_modules/lodash/_baseFindIndex.js:12:23
+      1  100.0%        LazyCompile: ~findLastIndex /Users/colch/Downloads/temp/node_modules/lodash/findLastIndex.js:44:23
+      1  100.0%          LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/lodash/_createFind.js:13:18
+      1  100.0%            LazyCompile: ~_printNewline /Users/colch/Downloads/temp/node_modules/babel-generator/lib/printer.js:433:59
+      1   50.0%      LazyCompile: ~baseClone /Users/colch/Downloads/temp/node_modules/lodash/_baseClone.js:89:19
+      1  100.0%        LazyCompile: ~cloneDeepWith /Users/colch/Downloads/temp/node_modules/lodash/cloneDeepWith.js:35:23
+      1  100.0%          LazyCompile: ~mergeOptions /Users/colch/Downloads/temp/node_modules/babel-core/lib/transformation/file/options/option-manager.js:190:63
+      1  100.0%            LazyCompile: ~init /Users/colch/Downloads/temp/node_modules/babel-core/lib/transformation/file/options/option-manager.js:351:47
+      2    8.0%    T v8::internal::Builtin_DateNow(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      LazyCompile: ~testClockAccuracy /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/clock-is-accurate.js:7:27
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/clock-is-accurate.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/performance.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/index.js:1:11
+      1   50.0%      LazyCompile: ~calculateClockOffset /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/calculate-clock-offset.js:14:30
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/calculate-clock-offset.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/lib/performance.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/w3c-hr-time/index.js:1:11
+
+     23    1.1%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     23  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    8.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request-promise-core/lib/plumbing.js:1:11
+      2  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request-promise-core/configure/request2.js:1:11
+      2  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request-promise-native/lib/rp.js:1:11
+      2  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      2    8.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/micromatch/lib/utils.js:1:11
+      2  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/micromatch/lib/expand.js:1:11
+      2  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/micromatch/index.js:1:11
+      2  100.0%            LazyCompile: ~_load_micromatch /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:15:26
+      2    8.7%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:1:11
+      2  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      2  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      2  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request/request.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request/index.js:1:11
+      1  100.0%          LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/request-promise-native/lib/rp.js:7:55
+      1  100.0%            LazyCompile: ~module.exports /Users/colch/Downloads/temp/node_modules/stealthy-require/lib/index.js:29:27
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/parse5/lib/extensions/position_tracking/preprocessor_mixin.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/parse5/lib/extensions/location_info/tokenizer_mixin.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/parse5/lib/extensions/location_info/parser_mixin.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/parse5/lib/parser/index.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/HTMLAndSVGElementShared-impl.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/helpers/traversal.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/Document-impl.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/helpers/document-base-url.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/utils.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/MouseEvent.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/HTMLElement.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/Document.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/xmlhttprequest.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/browser/Window.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/events/ErrorEvent-impl.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/generated/ErrorEvent.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jsdom/lib/api.js:1:11
+      1  100.0%        LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      1  100.0%          LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      1  100.0%            LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:17:42
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/diff/lib/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-diff/build/diff_strings.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-diff/build/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-snapshot/build/index.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/cssom/lib/parse.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/cssom/lib/CSSStyleDeclaration.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/cssom/lib/index.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/cssstyle/lib/CSSStyleDeclaration.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/asn1/lib/ber/index.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/asn1/lib/index.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/sshpk/lib/formats/pem.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/sshpk/lib/formats/auto.js:1:11
+      1    4.3%      Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/compile/_rules.js:1:11
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/compile/rules.js:1:11
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/ajv/lib/ajv.js:1:11
+      1  100.0%            Script: ~<anonymous> /Users/colch/Downloads/temp/node_modules/har-validator/lib/promise.js:1:11
+      1    4.3%      LazyCompile: ~_load_micromatch /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:15:26
+      1  100.0%        LazyCompile: ~globs.map.each /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:53:30
+      1  100.0%          LazyCompile: ~globsToMatcher /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:48:24
+      1  100.0%            LazyCompile: ~SearchSource /Users/colch/Downloads/temp/node_modules/jest-cli/build/search_source.js:74:14
+      1    4.3%      LazyCompile: ~_load_jsdom /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:17:21
+      1  100.0%        LazyCompile: ~JSDOMEnvironment /Users/colch/Downloads/temp/node_modules/jest-environment-jsdom/build/index.js:33:14
+      1  100.0%          LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:17:42
+      1  100.0%            LazyCompile: ~step /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:147:153
+      1    4.3%      LazyCompile: ~_load_blacklist /Users/colch/Downloads/temp/node_modules/jest-haste-map/build/worker.js:80:25
+      1  100.0%        LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-haste-map/build/worker.js:9:42
+      1  100.0%          Builtin: GeneratorPrototypeNext
+      1  100.0%            LazyCompile: ~step /Users/colch/Downloads/temp/node_modules/jest-haste-map/build/worker.js:100:153
+      1    4.3%      LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:17:42
+      1  100.0%        LazyCompile: ~step /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:147:153
+      1  100.0%          LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:147:120
+      1  100.0%            LazyCompile: ~<anonymous> /Users/colch/Downloads/temp/node_modules/jest-runner/build/run_test.js:147:50
+
+     21    1.0%  t v8::internal::PropertyCallbackArguments::BasicCallNamedGetterCallback(void (*)(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&), v8::internal::Handle<v8::internal::Name>)
+     21  100.0%    T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+     21  100.0%      LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:25:19
+     21  100.0%        LazyCompile: ~Object.<anonymous>.module.exports /Users/colch/Downloads/temp/compare.js:51:18
+     21  100.0%          LazyCompile: ~it /Users/colch/Downloads/temp/__tests__/compare.js:4:33
+     21  100.0%            LazyCompile: ~asyncFn /Users/colch/Downloads/temp/node_modules/jest-jasmine2/build/jasmine_async.js:80:30
+

@@ -1,0 +1,12 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "22.4.4",
+    "jsdom": "11.10.0",
+    "pixelmatch": "4.0.2",
+    "pngjs": "3.3.3"
+  }
+}

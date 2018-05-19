@@ -1,0 +1,280 @@
+Statistical profiling result from ./isolate-0x102802400-v8.log, (310 ticks, 7 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      4    1.3%          /usr/lib/system/libsystem_pthread.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     65   21.0%   21.2%  LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      8    2.6%    2.6%  Builtin: LoadIC
+      5    1.6%    1.6%  Stub: CallApiCallbackStub
+      2    0.6%    0.7%  LazyCompile: ~normalizeString path.js:57:25
+      2    0.6%    0.7%  Builtin: InterpreterEntryTrampoline
+      1    0.3%    0.3%  LazyCompile: ~realpathSync fs.js:1622:40
+      1    0.3%    0.3%  LazyCompile: ~binding internal/bootstrap/loaders.js:58:39
+      1    0.3%    0.3%  LazyCompile: *now perf_hooks.js:415:6
+
+ [C++]:
+   ticks  total  nonlib   name
+     53   17.1%   17.3%  T v8::ArrayBuffer::GetContents()
+     38   12.3%   12.4%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     27    8.7%    8.8%  t _internal_catch_exception_raise_state_identity
+     18    5.8%    5.9%  t _uv__hrtime
+     10    3.2%    3.3%  T ___pthread_sigmask
+      7    2.3%    2.3%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    2.3%    2.3%  T v8::internal::JSTypedArray::GetBuffer()
+      5    1.6%    1.6%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    1.0%    1.0%  t node::GetBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.6%    0.7%  t v8::internal::HeapObject::Size() const
+      2    0.6%    0.7%  T v8::internal::Heap::Scavenge()
+      2    0.6%    0.7%  T v8::ArrayBufferView::Buffer()
+      2    0.6%    0.7%  T ___getrlimit
+      1    0.3%    0.3%  t v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      1    0.3%    0.3%  t v8::internal::compiler::LoopFinderImpl::PropagateBackward()
+      1    0.3%    0.3%  t v8::internal::compiler::CallBuffer::CallBuffer(v8::internal::Zone*, v8::internal::compiler::CallDescriptor const*, v8::internal::compiler::FrameStateDescriptor*)
+      1    0.3%    0.3%  t v8::internal::ParserBase<v8::internal::PreParser>::ParseStatementList(v8::internal::PreParserList<v8::internal::PreParserStatement>, v8::internal::Token::Value, bool, bool*)
+      1    0.3%    0.3%  t v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryExpression(int, bool, bool*)
+      1    0.3%    0.3%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      1    0.3%    0.3%  t v8::internal::CompactionSpace::is_local()
+      1    0.3%    0.3%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  t _szone_malloc_should_clear
+      1    0.3%    0.3%  t _mach_msg_destroy_port
+      1    0.3%    0.3%  t __os_unfair_lock_unlock_slow
+      1    0.3%    0.3%  t __os_unfair_lock_lock_slow
+      1    0.3%    0.3%  t ___vfprintf
+      1    0.3%    0.3%  t ___find_warguments
+      1    0.3%    0.3%  T v8::internal::interpreter::BytecodeRegisterOptimizer::Flush()
+      1    0.3%    0.3%  T v8::internal::interpreter::BytecodeGenerator::VisitCountOperation(v8::internal::CountOperation*)
+      1    0.3%    0.3%  T v8::internal::compiler::LiveRangeBuilder::ProcessInstructions(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      1    0.3%    0.3%  T v8::internal::String::CalculateLineEnds(v8::internal::Handle<v8::internal::String>, bool)
+      1    0.3%    0.3%  T v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)
+      1    0.3%    0.3%  T v8::internal::Scanner::ScanIdentifierOrKeywordInner(v8::internal::Scanner::LiteralScope*)
+      1    0.3%    0.3%  T v8::internal::PagedSpaces::next()
+      1    0.3%    0.3%  T v8::internal::Logger::LogBytecodeHandler(v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale, v8::internal::Code*)
+      1    0.3%    0.3%  T v8::internal::Heap::AllocateByteArray(int, v8::internal::PretenureFlag)
+      1    0.3%    0.3%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash()
+      1    0.3%    0.3%  T v8::internal::FieldType::cast(v8::internal::Object*)
+      1    0.3%    0.3%  T v8::internal::FeedbackVector::New(v8::internal::Isolate*, v8::internal::Handle<v8::internal::SharedFunctionInfo>)
+      1    0.3%    0.3%  T v8::internal::Factory::NewFixedArray(int, v8::internal::PretenureFlag)
+      1    0.3%    0.3%  T v8::internal::Deserializer<v8::internal::DefaultDeserializerAllocator>::ReadData(v8::internal::Object**, v8::internal::Object**, int, unsigned char*)
+      1    0.3%    0.3%  T v8::internal::Builtin_ArrayUnshift(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.3%    0.3%  T v8::internal::BuiltinSnapshotUtils::BytecodeToIndex(v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)
+      1    0.3%    0.3%  T v8::internal::Assembler::call(v8::internal::Label*)
+      1    0.3%    0.3%  T v8::internal::Accessors::StringLengthGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  T v8::internal::Accessors::FunctionLengthGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.3%    0.3%  T _renameat
+      1    0.3%    0.3%  T _getpid
+      1    0.3%    0.3%  T _getipv4sourcefilter
+      1    0.3%    0.3%  T _fdopen
+      1    0.3%    0.3%  T _CRYPTO_atomic_add
+
+ [Summary]:
+   ticks  total  nonlib   name
+     85   27.4%   27.8%  JavaScript
+    214   69.0%   69.9%  C++
+     10    3.2%    3.3%  GC
+      4    1.3%          Shared libraries
+      7    2.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     53   27.7%   17.1%  T v8::ArrayBuffer::GetContents()
+     48   25.1%   15.5%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     27   14.1%    8.7%  t _internal_catch_exception_raise_state_identity
+     18    9.4%    5.8%  t _uv__hrtime
+     15    7.9%    4.8%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    3.7%    2.3%  T v8::internal::JSTypedArray::GetBuffer()
+      6    3.1%    1.9%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    1.0%    0.6%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.6%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.6%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.6%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.0%    0.6%  T v8::ArrayBufferView::Buffer()
+      1    0.5%    0.3%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Builtin_ObjectDefineProperties(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T v8::internal::Builtin_ArrayUnshift(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.5%    0.3%  T _renameat
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     65   21.0%  LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+     65  100.0%    LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+     65  100.0%      Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+     65  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+     65  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+     65  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:580:33
+
+     53   17.1%  T v8::ArrayBuffer::GetContents()
+     53  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+     53  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+     53  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+     53  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+     53  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+     38   12.3%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     38  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     30   78.9%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+     30  100.0%        LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:111:34
+      4   13.3%          Script: ~<anonymous> tty.js:1:11
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      3   10.0%          LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      3  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:16:30
+      2    6.7%          Script: ~<anonymous> util.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    6.7%          Script: ~<anonymous> internal/fs/promises.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      2    6.7%          Script: ~<anonymous> fs.js:1:11
+      2  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> stream.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> perf_hooks.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> net.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> internal/url.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> internal/process.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> internal/modules/esm/default_resolve.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> internal/async_hooks.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> console.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> buffer.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> assert.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          Script: ~<anonymous> _stream_readable.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1    3.3%          LazyCompile: ~setupV8 internal/bootstrap/node.js:473:19
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    3.3%          LazyCompile: ~setupProcessFatal internal/bootstrap/node.js:419:29
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    3.3%          LazyCompile: ~setupGlobalVariables internal/bootstrap/node.js:292:32
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    3.3%          LazyCompile: ~setupGlobalTimeouts internal/bootstrap/node.js:341:31
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    3.3%          LazyCompile: ~setupGlobalConsole internal/bootstrap/node.js:351:30
+      1  100.0%            LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1    3.3%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:480:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:618:36
+      8   21.1%      LazyCompile: ~Script vm.js:38:14
+      8  100.0%        LazyCompile: ~createScript vm.js:245:22
+      8  100.0%          LazyCompile: ~runInThisContext vm.js:294:26
+      8  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+
+     27    8.7%  t _internal_catch_exception_raise_state_identity
+     27  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+     27  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+     27  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+     27  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+     27  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+     18    5.8%  t _uv__hrtime
+     18  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+     18  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+     18  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+     18  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+     18  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+     10    3.2%  T ___pthread_sigmask
+      6   60.0%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   16.7%      LazyCompile: ~sort native array.js:741:46
+      1  100.0%        Script: ~<anonymous> internal/modules/cjs/helpers.js:1:11
+      1  100.0%          LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1  100.0%            LazyCompile: ~NativeModule.require internal/bootstrap/loaders.js:111:34
+      1   16.7%      LazyCompile: ~realpathSync fs.js:1622:40
+      1  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:193:20
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:212:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:537:35
+      1   16.7%      LazyCompile: ~_tickCallback internal/process/next_tick.js:41:25
+      1  100.0%        LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:717:26
+      1  100.0%          LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1  100.0%            Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:16:30
+      1   16.7%      LazyCompile: ~Readable.removeListener _stream_readable.js:829:45
+      1  100.0%        LazyCompile: ~write console.js:141:15
+      1  100.0%          LazyCompile: ~log console.js:194:37
+      1  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   16.7%      LazyCompile: ~QuickSort native array.js:564:19
+      1  100.0%        LazyCompile: ~QuickSort native array.js:564:19
+      1  100.0%          LazyCompile: ~QuickSort native array.js:564:19
+      1  100.0%            LazyCompile: ~InnerArraySort native array.js:520:24
+      1   16.7%      Builtin: ArrayForEach
+      1  100.0%        LazyCompile: ~E internal/errors.js:226:11
+      1  100.0%          Script: ~<anonymous> internal/errors.js:1:11
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:196:44
+      1   10.0%    T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~setupProcessICUVersions internal/bootstrap/node.js:489:35
+      1  100.0%        LazyCompile: ~startup internal/bootstrap/node.js:19:19
+      1  100.0%          Script: ~bootstrapNodeJSCore internal/bootstrap/node.js:16:30
+
+      8    2.6%  Builtin: LoadIC
+      8  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      8  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      8  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      8  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      8  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+      7    2.3%  t node::Hrtime(v8::FunctionCallbackInfo<v8::Value> const&)
+      6   85.7%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      6  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      6  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      6  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      6  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+      1   14.3%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~hrtime internal/process.js:103:35
+      1  100.0%        LazyCompile: ~now perf_hooks.js:140:13
+      1  100.0%          LazyCompile: ~now perf_hooks.js:415:6
+      1  100.0%            LazyCompile: ~runCycles /Users/colch/Downloads/temp/compare.js:32:20
+
+      7    2.3%  UNKNOWN
+      1   14.3%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      1  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      1  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+      7    2.3%  T v8::internal::JSTypedArray::GetBuffer()
+      7  100.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      7  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      7  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      7  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      7  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+
+      5    1.6%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      5  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      5  100.0%      LazyCompile: ~WriteStream tty.js:68:21
+      5  100.0%        LazyCompile: ~createWritableStdioStream internal/process/stdio.js:147:35
+      3   60.0%          LazyCompile: ~getStdout internal/process/stdio.js:17:21
+      3  100.0%            Script: ~<anonymous> console.js:1:11
+      2   40.0%          LazyCompile: ~getStderr internal/process/stdio.js:32:21
+      2  100.0%            Script: ~<anonymous> console.js:1:11
+
+      5    1.6%  Stub: CallApiCallbackStub
+      3   60.0%    LazyCompile: *runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      3  100.0%      LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      3  100.0%        Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      3  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      3  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+      1   20.0%    LazyCompile: ~now perf_hooks.js:415:6
+      1  100.0%      LazyCompile: ~runCycles /Users/colch/Downloads/temp/compare.js:32:20
+      1  100.0%        LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      1  100.0%          Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      1   20.0%    LazyCompile: ~module.exports /Users/colch/Downloads/temp/compare.js:58:18
+      1  100.0%      Script: ~<anonymous> /Users/colch/Downloads/temp/compare.js:1:11
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:639:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:687:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:580:33
+
+      4    1.3%  /usr/lib/system/libsystem_pthread.dylib
+
